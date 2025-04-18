@@ -1,10 +1,10 @@
-# 📈 S&P 500 Price Movement Prediction Using LSTM Neural Networks
+#  S&P 500 Price Movement Prediction Using LSTM Neural Networks
 
 This project implements a machine learning system designed to **predict whether the S&P 500 index will rise or fall on the next trading day**. It uses **Long Short-Term Memory (LSTM)** neural networks—an architecture well-suited for time series forecasting—to analyze historical price data and technical indicators for binary market direction predictions.
 
 ---
 
-## 🧠 Project Overview
+##  Project Overview
 
 The system collects historical stock market data for the **S&P 500 (via the SPY ETF)** using the **Alpaca trading API**, processes this data into meaningful features, trains an LSTM model, and predicts whether the market will go **up or down** the next day. 
 
@@ -14,9 +14,9 @@ The model provides:
 
 ---
 
-## ⚙️ Technical Components
+##  Technical Components
 
-### 📊 Data Collection & Processing
+###  Data Collection & Processing
 
 Handled by the `Data_import_Alpaca` class:
 - Connects to the **Alpaca API** using authentication keys
@@ -27,7 +27,7 @@ Handled by the `Data_import_Alpaca` class:
 
 ---
 
-### 🧪 Feature Engineering
+###  Feature Engineering
 
 Managed by the `features_development` class, which transforms raw price data into technical indicators, including:
 
@@ -45,23 +45,23 @@ Managed by the `features_development` class, which transforms raw price data int
 
 ---
 
-### 🧱 Model Architecture & Training
+###  Model Architecture & Training
 
 Implemented in the `LSTMPredictor` class using **TensorFlow/Keras**:
 
-#### 🔄 Data Preprocessing:
+####  Data Preprocessing:
 - Feature normalization (`MinMaxScaler`)
 - Time series windowing (default: 10 days)
 - 80/20 train-test split
 
-#### 🧠 Neural Network Structure:
+####  Neural Network Structure:
 - LSTM layer (50 units, return sequences)
 - Dropout (20%)
 - LSTM layer (50 units)
 - Dropout (20%)
 - Dense output layer with **sigmoid** activation
 
-#### ⚙️ Training:
+#### ⚙ Training:
 - **Loss**: Binary Cross-Entropy
 - **Optimizer**: Adam
 - **Epochs**: 50
@@ -70,7 +70,7 @@ Implemented in the `LSTMPredictor` class using **TensorFlow/Keras**:
 
 ---
 
-### 📈 Prediction & Evaluation
+### Prediction & Evaluation
 
 Post-training, the model:
 - Predicts on test set to evaluate accuracy
@@ -84,16 +84,16 @@ This gives users **actionable insights** with confidence levels to support poten
 
 ---
 
-## 🗂️ Project Structure
+##  Project Structure
 
 The codebase is organized into modular components:
 
-main.py: Orchestrates the entire pipeline
+- **`main.py`** – Orchestrates the entire machine learning pipeline from data retrieval to prediction output.
+- **`data_alpaca.py`** – Handles historical market data retrieval and initial cleaning using the Alpaca API.
+- **`features_development.py`** – Performs feature engineering by generating technical indicators from raw price data.
+- **`model.py`** – Defines and trains the LSTM neural network, handles sequence generation, and makes predictions.
 
-data_alpaca.py: Handles data retrieval and cleaning
-
-features_development.py: Generates technical indicators
-
-model.py: Implements the LSTM neural network and prediction logic
-
-This structure enables easy maintenance and potential expansion of the system with additional features or alternative model architectures.
+This modular structure enables easy maintenance and potential expansion of the system, such as:
+- Adding new technical indicators
+- Plugging in alternative machine learning models
+- Adapting the pipeline for other financial instruments
