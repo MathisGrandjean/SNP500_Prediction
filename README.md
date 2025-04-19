@@ -30,7 +30,7 @@ The features engineering is developed by the 'features_developmen' class, which 
 - Momentum (5, 10, 20 days) : Price at t - price at t-n
 - Volatility (5, 10, 20 days) 
 
-The target variable is a binary variable equal to  `1` if next day’s close > today’s close or `0` otherwise.
+The target variable is a binary variable equal to 1 if next day’s close > today’s close or 0 otherwise.
 
 ---
 
