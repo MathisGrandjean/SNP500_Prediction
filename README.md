@@ -37,7 +37,7 @@ The target variable is a binary variable equal to  `1` if next day’s close > t
 ###  Model Architecture & Training
 
 The LSTM model is contained in the 'LSTMPredictor class. The model uses TensorFlow/Keras.
-The LSTM mmodel is a kind of neural network that is really god at remembering pattern. 
+The LSTM model is a kind of neural network that is really god at remembering pattern. 
 First, we need to process data.
 
 ####  Data Preprocessing:
