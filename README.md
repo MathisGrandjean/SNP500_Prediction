@@ -1,7 +1,7 @@
 #  S&P 500 Price Movement Prediction Using LSTM Neural Networks
 
 This projet implements a machine learning model designed to **predit whether the SNP500 will rise or fall on the next day**. To do so, it uses the **Long Short-Term Memory (LSTM)** neural network that is well-suited for times series predictions
----
+
 
 ##  Project Overview
 
