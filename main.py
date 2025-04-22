@@ -7,8 +7,8 @@ import matplotlib.pyplot as plt
 start_date=datetime.datetime(1980, 1, 1)
 end_date=datetime.date.today()
 symbols=['SPY']
-api_key='PKSBPRNUWDCKX94C3JSK'
-secret_key='589t1ufEvRrGK25jGpeohMpeHbhYtxyw2Xp52ahT'
+api_key=''
+secret_key=''
 
 #import of data
 
